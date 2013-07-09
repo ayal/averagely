@@ -1,3 +1,58 @@
-<html>
-hi!
+<!DOCTYPE html>
+<html ng-app="averagely-gallery">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularJS Plunker</title>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link rel="stylesheet" href="style.css" />
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script data-require="angular.js@1.1.x" src="http://code.angularjs.org/1.1.5/angular.min.js" data-semver="1.1.5"></script>
+
+    <script src="app.js"></script>
+
+  </head>
+
+  <body ng-controller="GalleryCtrl">
+
+  <div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="#">Averagly Gallery</a>
+    <ul class="nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+    </ul>
+  </div>
+</div>
+
+    <div class="container-fluid">
+    <div class="box" ng-repeat="(id, imgdata) in data">
+      <div class="imgwrp">
+        <a href="#/img/{{id}}">
+          <img ng-src="{{imgdata.thumb}}">
+        </a>
+      </div>
+      <div class="info">
+      <span class="img-name">{{imgdata.name}}</span> |
+      <span class="img-artist">{{imgdata.artist}}</span>
+      </div>
+    </div>
+
+    <div class="modal fade hide in" style="text-align:center;">
+      <div class="modal-header">
+      <a class="close" data-dismiss="modal" ng-click="nogo=true">×</a>
+      <span>{{imgfordialog.name}}</span>
+      <span>{{imgfordialog.artist}}</span>
+      </div>
+
+    <div class="modal-body" style="max-height:600px">
+      <img ng-src="{{imgfordialog.src}}">
+    </div>
+    </div>
+    </div>
+  </body>
+
 </html>
