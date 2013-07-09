@@ -66,12 +66,13 @@ app.controller('GalleryCtrl', function($scope, $http, $route, $routeParams) {
    $scope.$on('$routeChangeSuccess', function() {
      console.log('ROUTE!', $routeParams);
     if ($routeParams.id) {
-      $('.modal').modal('show');
-      $scope.imgfordialog = $scope.data[$routeParams.id];
+        $('.modal').modal('show');
+        $scope.imgfordialog = $scope.data[$routeParams.id];
+        $scope.nogo = false;
     }
     else {
-      $('.modal').modal('hide');
-
+        $('.modal').modal('hide');
+        $scope.nogo = true;
     }
   });
 
