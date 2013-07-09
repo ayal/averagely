@@ -48,16 +48,20 @@
      <script type="text/ng-template" id="gallery">
 
        <div class="container-fluid">
+
          <div class="box" ng-repeat="(id, imgdata) in data">
+
            <div class="imgwrp">
              <a href="#/img/{{id}}">
                <img ng-src="{{imgdata.thumb}}">
              </a>
            </div>
+
            <div class="info">
              <span class="img-name">{{imgdata.name}}</span> |
              <span class="img-artist">{{imgdata.artist}}</span>
            </div>
+
          </div>
 
          <div class="modal fade in" ng-class="{'hide': 'nogo'}" style="text-align:center;">
@@ -66,12 +70,13 @@
              <span>{{imgfordialog.name}}</span>
              <span>{{imgfordialog.artist}}</span>
            </div>
-
            <div class="modal-body" style="max-height:600px">
              <img ng-src="{{imgfordialog.src}}">
            </div>
          </div>
+
        </div>
+
      </script>
 
     <div ng-view>

@@ -66,7 +66,9 @@ app.controller('GalleryCtrl', function($scope, $http, $route, $routeParams) {
    $scope.$on('$routeChangeSuccess', function() {
      console.log('ROUTE!', $routeParams);
     if ($routeParams.id) {
-        $('.modal').modal('show');
+        setTimeout(function(){
+            $('.modal').modal('show');
+        }, 100);
         $scope.imgfordialog = $scope.data[$routeParams.id];
         $scope.nogo = false;
     }
