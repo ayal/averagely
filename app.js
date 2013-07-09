@@ -44,6 +44,7 @@ var app = angular.module('averagely-gallery', []);
 app.config(function($routeProvider) {
 //  $locationProvider.html5Mode(true);
       $routeProvider
+        .when("/",{templateUrl: 'gallery'})
         .when("/gallery",{templateUrl: 'gallery'})
         .when("/about", {templateUrl: 'about'})
         .when("/feedback",{templateUrl: 'feedback'})
