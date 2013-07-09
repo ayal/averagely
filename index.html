@@ -16,17 +16,25 @@
   </head>
 
   <body ng-controller="GalleryCtrl">
+      <!-- NAVBAR -->
+      <div class="navbar">
+        <div class="navbar-inner">
+          <div class="container">
+            <a class="brand" href="#"><img src="icons/averagely_icon16.png" style="margin-bottom:4px;"> AVERAGELY</a>
+            <ul class="nav">
+              <li><a href="#">gallery</a></li>
+              <li><a href="#">about</a></li>
+              <li><a href="#">feedback</a></li>
+            </ul>
+            <div class="pull-right">
+              <!--p class="nav navbar-text">{{avg.count}}/{{avg.images.length}} images</p-->
+              <a class="btn btn-success" href="#publish-dialog" data-toggle="modal" ng-class="{'disabled': eq(avg.images.length,0)}"><i class="icon-cloud-upload"></i> publish!</a>
+              <a class="trash btn btn-danger" title="clear current project" ng-class="{'disabled': eq(avg.images.length,0)}"><i class="icon-trash"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  <div class="navbar">
-  <div class="navbar-inner">
-    <a class="brand" href="#">Averagly Gallery</a>
-    <ul class="nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Link</a></li>
-      <li><a href="#">Link</a></li>
-    </ul>
-  </div>
-</div>
 
     <div class="container-fluid">
     <div class="box" ng-repeat="(id, imgdata) in data">
