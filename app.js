@@ -48,10 +48,13 @@ app.config(function($routeProvider) {
         .when("/about", {templateUrl: 'about'})
         .when("#/about", {templateUrl: 'about'})
         .when("/feedback",{templateUrl: 'feedback'})
+        .when('/participant', {templateUrl: 'participantList'})
         .when("/img/:id", {templateUrl: 'gallery'});
 });
 
 app.controller('GalleryCtrl', function($scope, $http, $route, $routeParams) {
+    return;
+
   $http({method: 'GET', url: '/data.json'}).
   success(function(data, status, headers, config) {
     console.log('go data!',data);
