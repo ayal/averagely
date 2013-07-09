@@ -44,10 +44,10 @@ var app = angular.module('averagely-gallery', []);
 app.config(function($locationProvider, $routeProvider) {
 //  $locationProvider.html5Mode(true);
       $routeProvider
-        .when("/gallery",{templateUrl: 'gallery.html'})
-        .when("/about", {templateUrl: 'about.html'})
-        .when("/feedback",{templateUrl: 'feedback.html'})
-        .when("/img/:id", {templateUrl: 'gallery.html'});
+        .when("/gallery",{template: 'gallery'})
+        .when("/about", {template: 'about'})
+        .when("/feedback",{template: 'feedback'})
+        .when("/img/:id", {template: 'gallery'});
 });
 
 app.controller('GalleryCtrl', function($scope, $http, $route, $routeParams) {
