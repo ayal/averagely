@@ -13,23 +13,12 @@
 
     <script src="app.js?v=2"></script>
 
-     <script type="text/ng-template" id="about">
-       <div>
-         This is about us!
-       </div>
-     </script>
-
-     <script type="text/ng-template" id="feedback">
-       <div>
-         GIVE US FEEDBACK NOW!
-       </div>
-     </script>
 
 
   </head>
 
 
-  <body ng-controller="GalleryCtrl">
+  <body>
 
       <!-- NAVBAR -->
       <div class="navbar">
@@ -47,9 +36,24 @@
         </div>
       </div>
 
+
+    <script type="text/ng-template" id="about">
+      <div>
+        This is about us!
+      </div>
+    </script>
+
+    <script type="text/ng-template" id="feedback">
+      <div>
+        GIVE US FEEDBACK NOW!
+      </div>
+    </script>
+
+
+
      <script type="text/ng-template" id="gallery">
 
-       <div class="container-fluid">
+       <div class="container-fluid" ng-controller="GalleryCtrl">
          <div class="box" ng-repeat="(id, imgdata) in data">
            <div class="imgwrp">
              <a href="#/img/{{id}}">
