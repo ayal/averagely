@@ -42,7 +42,7 @@ data = {};
 var app = angular.module('averagely-gallery', []);
 
 app.config(function($locationProvider, $routeProvider) {
-  $locationProvider.html5Mode(true);
+//  $locationProvider.html5Mode(true);
       $routeProvider
       .when("/",{})
       .when("/img/:id",{kaka: 1})
