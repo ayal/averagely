@@ -46,6 +46,7 @@ app.config(function($locationProvider, $routeProvider) {
       $routeProvider
         .when("/gallery",{templateUrl: 'gallery'})
         .when("/about", {templateUrl: 'about'})
+        .when("#/about", {templateUrl: 'about'})
         .when("/feedback",{templateUrl: 'feedback'})
         .when("/img/:id", {templateUrl: 'gallery'});
 });
