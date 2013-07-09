@@ -11,11 +11,11 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
     <script data-require="angular.js@1.1.x" src="http://code.angularjs.org/1.1.5/angular.min.js" data-semver="1.1.5"></script>
 
-    <script src="app.js?v=3"></script>
+    <script src="app.js?v=4"></script>
   </head>
 
 
-  <body ng-app="averagely-gallery">
+  <body ng-app="averagely-gallery" ng-controller="GalleryCtrl">
 
       <!-- NAVBAR -->
       <div class="navbar">
@@ -50,7 +50,7 @@
 
      <script type="text/ng-template" id="gallery">
 
-       <div class="container-fluid" ng-controller="GalleryCtrl">
+       <div class="container-fluid">
          <div class="box" ng-repeat="(id, imgdata) in data">
            <div class="imgwrp">
              <a href="#/img/{{id}}">
